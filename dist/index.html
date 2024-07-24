@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Notes App</title>
+    <script defer="defer" src="bundle.js"></script>
+  </head>
+
+  <body>
+    <header><custom-heading title="Welcome to Notes"></custom-heading></header>
+    <main>
+      <form id="noteForm">
+        <label for="noteTitle">Judul:</label>
+        <input
+          id="noteTitle"
+          name="noteTitle"
+          required
+          autocomplete="off"
+          aria-describedby="noteValidation"
+        />
+        <p
+          id="noteValidation"
+          class="validation-message"
+          aria-live="polite"
+        ></p>
+        <label for="noteBody">Isi:</label>
+        <textarea id="noteBody" name="noteBody" rows="4" cols="50" required>
+        </textarea>
+        <button type="submit">Add Note</button>
+      </form>
+      <notes-list></notes-list>
+    </main>
+    <footer><footer-custom text="My Notes &copy; 2024"></footer-custom></footer>
+    <loading-indicator></loading-indicator>
+  </body>
+</html>
